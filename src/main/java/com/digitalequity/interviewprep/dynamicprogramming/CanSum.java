@@ -39,12 +39,13 @@ public class CanSum {
     static boolean canSumTabulated(int targetSum, int[] numbers) {
         boolean[] table = new boolean[targetSum + 1];
         table[0] = true; // seed the array with table[0] since 0 will always return true
-
-        for (int i = 0; i< numbers.length; i++) {
+        // loop through table up to targetSum
+        for (int i = 0; i<= targetSum; i++) {
             // if the value at the current index is true, we need to look at the rest of the table
             if (table[i]) {
                 for (int num: numbers) {
-                    table[i + num] = true;
+                    // if index is valid, set index to true
+                    if (i + num <= targetSum) table[i + num] = true;
                 }
             }
         }
@@ -61,6 +62,6 @@ public class CanSum {
 
         System.out.printf("Can sum naive solution: %b %n", canSumResult);
         System.out.printf("Can sum memoized solution: %b %n", canSumMemoizedResult);
-        System.out.printf("Can sum tabulated solution: %b %n", canSumMemoizedResult);
+        System.out.printf("Can sum tabulated solution: %b %n", canSumTabulatedResult);
     }
 }
