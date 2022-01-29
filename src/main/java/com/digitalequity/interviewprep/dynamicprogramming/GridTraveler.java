@@ -3,7 +3,14 @@ package com.digitalequity.interviewprep.dynamicprogramming;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class GridTraveler {
+    /*
+     * GridTraveler
+     * Say that you are a traveler on a 2D grid. You begin in the top left corner and your goal is to travel to the
+     * bottom right corner. You may only move down or right. In how many ways can you on a grid with dimensions m * n?
+     * */
+
     static Integer gridTravelerMemoized(int m, int n, Map<String, Integer> memo) {
         if (m == 1 && n == 1) return 1;
         if (m == 0 || n == 0) return 0;
