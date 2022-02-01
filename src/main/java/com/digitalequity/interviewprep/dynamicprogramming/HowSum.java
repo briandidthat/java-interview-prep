@@ -6,6 +6,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * HowSum
+ * Write a function `howSum` that takes in a targetSum and an array of numbers as arguments. The function should return
+ * an array containing any combination of elements that add up to exactly the targetSum. If there are multiple
+ * solutions, return any of them. If there is no solution, return null.
+ */
 public class HowSum {
     // brute force recursive solution
     // m = target sum, n = array length
