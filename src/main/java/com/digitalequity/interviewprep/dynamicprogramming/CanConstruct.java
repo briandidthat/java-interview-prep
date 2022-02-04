@@ -21,7 +21,7 @@ public class CanConstruct {
         // iterate through the wordBank
         for (String word : wordBank) {
             // check if the current word is a prefix of the target word
-            if (target.indexOf(word) == 0) {
+            if (target.startsWith(word)) {
                 // grab the rest of the word minus the prefix
                 String suffix = target.substring(word.length());
                 if (canConstruct(suffix, wordBank)) return true;
@@ -43,7 +43,7 @@ public class CanConstruct {
         // iterate through the word bank
         for (String word: wordBank) {
             // check if the current word is a prefix of the target word
-            if (target.indexOf(word) == 0) {
+            if (target.startsWith(word)) {
                 // grab the rest of the word minus the prefix
                 String suffix = target.substring(word.length());
                 if (canConstructMemoized(suffix, wordBank, memo)) {
